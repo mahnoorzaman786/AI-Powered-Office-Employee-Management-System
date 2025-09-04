@@ -100,7 +100,7 @@ Contributions are welcome! Feel free to **fork** this repo and submit a **pull r
 ⭐ If you like this project, **give it a star** on GitHub to support me!
 
 
----
-[![GitHub stars](https://img.shields.io/github/stars/mahnoorzaman786/.svg?style=social&label=Star&maxAge=2592000)]
+---[
+[![GitHub stars](https://img.shields.io/github/stars/mahnoorzaman786/.svg?style=social&label=Star&maxAge=2592000)]](https://img.shields.io/github/stars/USERNAME/REPOSITORY.svg?style=social&label=Star&maxAge=2592000)
 
 
