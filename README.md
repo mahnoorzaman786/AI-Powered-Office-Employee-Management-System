@@ -70,12 +70,12 @@ Then open 👉 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 |  Home Page                      |
 | -----------------------------  |
-| ![Home](home.png)  |
+| ![Home](emp_app/static/images/home.png)  |
 
 
 |  Sign-in Page                       |
 | ---------------------------------- |
- | ![Sign-in](signin.png) |
+| ![Sign-in](emp_app/static/images/signin.png) |
 ---
 
 ## 🔮 Future Improvements
