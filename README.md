@@ -106,6 +106,5 @@ Contributions are welcome! Feel free to **fork** this repo and submit a **pull r
 
 
 ---
-=======
- A responsive AI Powered Office Employee Management System powered by Django, HTML, CSS, and Bootstrap.
+
 
