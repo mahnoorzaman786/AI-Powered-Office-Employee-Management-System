@@ -1,4 +1,5 @@
 # AI-Powered-Office-Employee-Management-System
+<<<<<<< HEAD
 
 A responsive AI Powered Office Employee Management System powered by Django, HTML, CSS, and Bootstrap.
 **Django-based Employee Management System** designed to simplify workforce operations. It helps organizations **add, track, filter, and manage employees** seamlessly through a modern web interface.  
@@ -105,3 +106,6 @@ Contributions are welcome! Feel free to **fork** this repo and submit a **pull r
 
 
 ---
+=======
+ A responsive AI Powered Office Employee Management System powered by Django, HTML, CSS, and Bootstrap.
+>>>>>>> e5fd4cf5ac9d5916550c0d03430094b8fe33f7db
