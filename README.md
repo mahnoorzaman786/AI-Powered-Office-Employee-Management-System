@@ -67,10 +67,14 @@ Then open 👉 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ## 📸 Screenshots
 
-| Home Page                     | Employee List                         | Sign-in Page                       |
-| ----------------------------- | ------------------------------------- | ---------------------------------- |
-| ![Home](screenshots/home.png) | ![Employees](screenshots/all_emp.png) | ![Sign-in](screenshots/signin.png) |
+|  Home Page                      |
+| -----------------------------  |
+| ![Home](home.png)  |
 
+
+|  Sign-in Page                       |
+| ---------------------------------- |
+ | ![Sign-in](signin.png) |
 ---
 
 ## 🔮 Future Improvements
@@ -101,6 +105,3 @@ Contributions are welcome! Feel free to **fork** this repo and submit a **pull r
 
 
 ---
-
-
-

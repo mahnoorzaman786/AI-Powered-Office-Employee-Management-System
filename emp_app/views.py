@@ -1,7 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from .models import Employee, Department, Role
+from .models import Department,Employee,Role
 from datetime import datetime
 from django.db.models import Q
+from django.shortcuts import render
 
 # Create your views here.
 
@@ -29,15 +30,36 @@ def add_emp(request):
         bonus = int(request.POST['bonus'])
         phone = int(request.POST['phone'])
         email = request.POST['email']
-        dept = request.POST['dept']
-        role = request.POST['role']
-        new_emp = Employee(first_name=first_name, last_name=last_name, salary=salary, bonus=bonus, phone=phone, dept_id=dept, role_id=role, email=email, hire_date=datetime.now())
+        dept_id = int(request.POST['dept'])   # ✅ dropdown sends ID
+        role_id = int(request.POST['role'])   # ✅ dropdown sends ID
+
+        # ✅ Create new employee
+        new_emp = Employee(
+            first_name=first_name,
+            last_name=last_name,
+            salary=salary,
+            bonus=bonus,
+            phone=phone,
+            email=email,
+            dept_id=dept_id,
+            role_id=role_id,
+            hire_date=datetime.now()
+        )
         new_emp.save()
         return HttpResponse("Employee added successfully")
+
     elif request.method == 'GET':
-        return render(request, 'add_emp.html')
-    else: 
+        # ✅ Send departments and roles to the template
+        departments = Department.objects.all()
+        roles = Role.objects.all()
+        return render(request, 'add_emp.html', {
+            'departments': departments,
+            'roles': roles
+        })
+
+    else:
         return HttpResponse("An Exception Occured! Employee Has Not Been Added")
+  
  
 def remove_emp(request, emp_id=0):
     if emp_id:

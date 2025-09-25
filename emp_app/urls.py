@@ -19,7 +19,8 @@ from django.urls import path, include
 from . import views
 urlpatterns = [
     path('', views.home, name = 'home'),
-     path('signin.html/', views.signin, name='signin'),  # http://127.0.0.1:8000/signin/
+     path('home/', views.home, name='home'),  # ✅ ADD THIS
+     path('signin/', views.signin, name='signin'),  # http://127.0.0.1:8000/signin/
     path('all_emp', views.all_emp, name='all_emp'),
     path('add_emp', views.add_emp, name='add_emp'),
     path('remove_emp', views.remove_emp, name='remove_emp'),

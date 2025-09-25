@@ -5,30 +5,235 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Remove An Employee</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+
+   <!-- ✅ Favicon Icon (Shows in Browser Tab) -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png">
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- ✅ Correct Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+  <style>
+    body {
+      background: rgb(253, 253, 253);
+      min-height: 100vh;
+      padding: 40px 0;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      max-width: 800px;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 700;
+      color:  rgb(67, 103, 197);
+      margin-bottom: 50px;
+    }
+
+        /* nav  */
+        /* ===== Navbar ===== */
+        .nav {
+            height: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5vw;
+            background: #fff;
+            color: #000;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-bottom: 80px;
+        }
+
+        .nav-part2 {
+            display: flex;
+            align-items: center;
+            gap: 4vw;
+        }
+
+        .nav h2 {
+            font-size: 1.5vw;
+            font-weight: 700;
+        }
+
+        .ri-building-line {
+            font-size: 50px;
+            background: linear-gradient(135deg, #2d3f94, #4367c5, #6995f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 6px rgba(247, 246, 246, 0.032);
+            /* transition: all 0.3s ease; */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .ri-building-line:hover {
+            background: linear-gradient(135deg, #ff66a7, #ff8a65);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav h4 {
+            font-size: 1.1vw;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .nav a {
+            font-size: 1.1vw;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            color: rgb(63, 102, 200);
+            text-decoration: none;
+            text-shadow: 2px 2px 0 #feffff,
+                4px 4px 0 #d4d5d9;
+        }
+
+        .nav a:hover {
+            color: rgb(252, 82, 153);
+
+        }
+
+
+        /* ===== Buttons ===== */
+        .nav button {
+            font-size: 1vw;
+            padding: 0.7vw 1.4vw;
+            background: linear-gradient(135deg, #2d3f94, #4367c5, #6995f5);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .nav button:hover {
+            background: linear-gradient(135deg, #ff66a7, #ff8a65);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        /* Icon colors */
+        .ri-team-fill {
+            color: #3498db;
+        }
+
+        /* Blue */
+        .ri-user-add-fill {
+            color: #2ecc71;
+        }
+
+        /* Green */
+        .ri-user-unfollow-fill {
+            color: #e74c3c;
+        }
+
+        /* Red */
+        .ri-filter-3-fill {
+            color: #f39c12;
+        }
+
+        .ri-menu-fold-3-fill {
+            font-weight: 800;
+            display: none;
+        }
+
+    .btn-primary {
+     background: linear-gradient(135deg, #2d3f94, #4367c5, #6995f5);
+      border: none;
+      padding: 20px 20px;
+      font-weight: 750;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+     background: linear-gradient(135deg, #ff66a7, #ff8a65);
+      transform: scale(1.05);
+    }
+
+    .dropdown-menu li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #6995f5;
+    }
+
+    .dropdown-menu li a i {
+      /* color: #dc3545; */
+      color:  rgb(67, 103, 197);
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
-    <!-- Content here -->
-         <h1>Remove An Employee!</h1>
-     
-      <hr>  
-      <!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    <b>Choose Employee To Be Removed</b>
-  </button>
-  <ul class="dropdown-menu">
-    {% for emp in emps %}
-    <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a></li>
-   {% endfor %}
-  </ul>
-</div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
+  <!-- Top Navigation -->
+    <div class="nav">
+     <h4><i class="ri-building-line"></i><a href="./home">Office</a>
+            <!-- <img src="" alt="" srcset=""> -->
+        </h4>
+      <div class="nav-part2">
+        <h4><i class="ri-team-fill nav-icon"></i><a href="./all_emp">All Employees</a></h4>
+        <h4><i class="ri-user-add-fill nav-icon"></i><a href="./add_emp">Add Employee</a> </h4>
+        <h4><i class="ri-user-unfollow-fill nav-icon"></i><a href="./remove_emp">Remove Employee</a></h4>
+        <h4><i class="ri-filter-3-fill nav-icon"></i> <a href="./filter_emp">Filter Employees</a></h4>
+        <!-- <button ><a href="signin.html"></a>Sign In</button> -->
+       <button onclick="window.location.href='{% url 'signin' %}'" class="login-button">Sign In</button>
+
+
+        <i class="ri-menu-fold-3-fill nav-icon menu-icon"></i>
+      </div>
+    </div>
+  <div class="container">
+    <h1><i class="bi bi-person-dash-fill"></i> Remove An Employee</h1>
+    
+    
+
+    <!-- ✅ Dropdown to select employee -->
+    <div class="btn-group w-100">
+      <button type="button" class="btn btn-primary dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+        <b><i class="bi bi-person-lines-fill"></i> Choose Employee To Be Removed</b>
+      </button>
+
+      <ul class="dropdown-menu w-100 text-start">
+        {% for emp in emps %}
+        <li>
+          <a class="dropdown-item" href="/remove_emp/{{ emp.id }}">
+            <i class="bi bi-person-x"></i> {{ emp.first_name }} {{ emp.last_name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
