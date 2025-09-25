@@ -1,0 +1,269 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #fdfdfd;
+  /* ✅ yellow was just for testing, now clean */
+}
+
+/* ===== Layout ===== */
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* ===== Navbar ===== */
+.nav {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  background: #fff;
+  color: #000;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+.nav h2 {
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+.ri-building-line {
+  font-size: 50px;
+  background: linear-gradient(135deg, #2d3f94, #4367c5, #6995f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 6px rgba(247, 246, 246, 0.032);
+  /* transition: all 0.3s ease; */
+ transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.ri-building-line:hover {
+ background: linear-gradient(135deg, #ff66a7, #ff8a65);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav h4 {
+  font-size: 1.1vw;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav a {
+  font-size: 1.1vw;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: rgb(63, 102, 200);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #feffff,
+               4px 4px 0 #d4d5d9;
+}
+
+.nav a:hover {
+  color: rgb(252, 82, 153);
+    
+}
+
+
+/* ===== Buttons ===== */
+.nav button {
+  font-size: 1vw;
+  padding: 0.7vw 1.4vw;
+  background: linear-gradient(135deg, #2d3f94, #4367c5, #6995f5);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.nav button:hover {
+  background: linear-gradient(135deg, #ff66a7, #ff8a65);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Icon colors */
+.ri-team-fill {
+  color: #3498db;
+}
+
+/* Blue */
+.ri-user-add-fill {
+  color: #2ecc71;
+}
+
+/* Green */
+.ri-user-unfollow-fill {
+  color: #e74c3c;
+}
+
+/* Red */
+.ri-filter-3-fill {
+  color: #f39c12;
+}
+
+.ri-menu-fold-3-fill {
+  font-weight: 800;
+  display: none;
+}
+
+/* Teal */
+/* ===== Content layout ===== */
+.content {
+  height: calc(100% - 100px);
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.left {
+  height: 100%;
+  width: 45%;
+  padding: 4vw 3vw;
+}
+
+.left h1 {
+  font-size: 4.2vw;
+  line-height: 4.4vw;
+}
+
+.left h1 span {
+  color: rgb(67, 103, 197);
+}
+
+.left p {
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #666;
+  width: 80%;
+  margin-top: 1.5vw;
+  margin-bottom: 2vw;
+}
+
+.content button {
+  font-size: 1vw;
+  padding: 1.2vw 2.1vw;
+
+  background: linear-gradient(135deg, #2d3f94, #4367c5, #7ea4f7);
+
+
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content button:hover {
+  background: linear-gradient(135deg, #ff66a7, #ff8a65);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.right {
+  height: 100%;
+  width: 55%;
+}
+
+.right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===== Responsive ===== */
+@media (max-width:600px) {
+  .nav {
+    padding: 0 6vw;
+    height: 60px;
+  }
+
+  .nav h2 {
+    font-size: 5.1vw;
+  }
+
+  .nav h4 {
+    font-size: 4vw;
+    display: none;
+  }
+
+  .nav button {
+    display: none;
+  }
+
+  .nav i {
+    display: block;
+    font-size: 4.5vw;
+  }
+
+  .content {
+    height: calc(100% - 60px);
+    flex-direction: column;
+  }
+
+  .left {
+    height: 45%;
+    width: 100%;
+    padding: 4vw 6vw;
+  }
+
+  .right {
+    width: 100%;
+    height: 55%;
+  }
+
+  .left h1 {
+    font-size: 10vw;
+    line-height: 11vw;
+  }
+
+  .left p {
+    font-size: 3vw;
+    width: 90%;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .content button {
+    font-size: 3vw;
+    padding: 3vw 3vw;
+  }
+
+  .right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office Management System</title>
+
+  <!-- ✅ Correct Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="./static/styles.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- Top Navigation -->
+    <div class="nav">
+      <h2><i class="ri-building-line"></i>
+        <!-- <img src="" alt="" srcset=""> -->
+      </h2>
+      <div class="nav-part2">
+        <h4><i class="ri-team-fill nav-icon"></i><a href="./all_emp">All Employees</a></h4>
+        <h4><i class="ri-user-add-fill nav-icon"></i><a href="./add_emp">Add Employee</a> </h4>
+        <h4><i class="ri-user-unfollow-fill nav-icon"></i><a href="./remove_emp">Remove Employee</a></h4>
+        <h4><i class="ri-filter-3-fill nav-icon"></i> <a href="./filter_emp">Filter Employees</a></h4>
+        <!-- <button ><a href="signin.html"></a>Sign In</button> -->
+        <button onclick="window.location.href='signin.html'" class="login-button">Sign In</button>
+
+        <i class="ri-menu-fold-3-fill nav-icon menu-icon"></i>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+      <div class="left">
+        <h1><span>Office Management System</span> Website.</h1>
+        <p>Automate your workflow, manage teams seamlessly, and unlock insights with our AI-powered office management system.</p>
+        <button>Explore Now</button>
+      </div>
+      <div class="right">
+        <img src="./static/images/erasebg-transformed.png"
+          alt="A professional office setting featuring a modern desk with a sleek computer monitor, a comfortable ergonomic chair, and neatly arranged office supplies. The environment is clean, organized, and conveys a sense of productivity and professionalism" />
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
